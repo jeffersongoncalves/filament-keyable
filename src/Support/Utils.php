@@ -4,7 +4,6 @@ namespace JeffersonGoncalves\Filament\Keyable\Support;
 
 use Filament\Panel;
 use Givebutter\LaravelKeyable\Models\ApiKey;
-
 use function config;
 
 class Utils
