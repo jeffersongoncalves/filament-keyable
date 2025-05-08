@@ -23,8 +23,8 @@ class KeyableResource extends Resource
                     ->schema([
                         Forms\Components\MorphToSelect::make('keyable')
                             ->label(__('filament-keyable::filament-keyable.column.keyable'))
-                            ->required(fn() => !Utils::isAllowEmptyModels())
-                            ->hidden(fn() => Utils::isAllowEmptyModels())
+                            ->required(fn () => ! Utils::isAllowEmptyModels())
+                            ->hidden(fn () => Utils::isAllowEmptyModels())
                             ->types(self::getModels()),
                         Forms\Components\TextInput::make('name')
                             ->label(__('filament-keyable::filament-keyable.column.name'))
@@ -43,6 +43,7 @@ class KeyableResource extends Resource
         foreach ($models as $model) {
             $models[] = Forms\Components\MorphToSelect\Type::make($model);
         }
+
         return $models;
     }
 
@@ -54,11 +55,11 @@ class KeyableResource extends Resource
                     ->columns()
                     ->schema([
                         Infolists\Components\TextEntry::make('keyable_id')
-                            ->label(fn() => __('filament-keyable::filament-keyable.infolist.keyable_id'))
-                            ->hidden(fn() => Utils::isAllowEmptyModels()),
+                            ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_id'))
+                            ->hidden(fn () => Utils::isAllowEmptyModels()),
                         Infolists\Components\TextEntry::make('keyable_type')
-                            ->label(fn() => __('filament-keyable::filament-keyable.infolist.keyable_type'))
-                            ->hidden(fn() => Utils::isAllowEmptyModels()),
+                            ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_type'))
+                            ->hidden(fn () => Utils::isAllowEmptyModels()),
                         Infolists\Components\TextEntry::make('name')
                             ->label(__('filament-keyable::filament-keyable.infolist.name')),
                         Infolists\Components\TextEntry::make('key')
@@ -75,15 +76,15 @@ class KeyableResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->label(fn() => __('filament-keyable::filament-keyable.column.name')),
+                    ->label(fn () => __('filament-keyable::filament-keyable.column.name')),
                 Tables\Columns\TextColumn::make('keyable_id')
-                    ->label(fn() => __('filament-keyable::filament-keyable.column.keyable_id'))
-                    ->hidden(fn() => Utils::isAllowEmptyModels()),
+                    ->label(fn () => __('filament-keyable::filament-keyable.column.keyable_id'))
+                    ->hidden(fn () => Utils::isAllowEmptyModels()),
                 Tables\Columns\TextColumn::make('keyable_type')
-                    ->label(fn() => __('filament-keyable::filament-keyable.column.keyable_type'))
-                    ->hidden(fn() => Utils::isAllowEmptyModels()),
+                    ->label(fn () => __('filament-keyable::filament-keyable.column.keyable_type'))
+                    ->hidden(fn () => Utils::isAllowEmptyModels()),
                 Tables\Columns\TextColumn::make('last_used_at')
-                    ->label(fn() => __('filament-keyable::filament-keyable.column.last_used_at'))
+                    ->label(fn () => __('filament-keyable::filament-keyable.column.last_used_at'))
                     ->dateTime()
                     ->sortable(),
             ])
