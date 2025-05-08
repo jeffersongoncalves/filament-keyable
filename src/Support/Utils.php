@@ -50,7 +50,7 @@ class Utils
 
     public static function getResourceSlug(): string
     {
-        return (string)config('filament-keyable.keyable_resource.slug');
+        return (string) config('filament-keyable.keyable_resource.slug');
     }
 
     public static function isResourceNavigationBadgeEnabled(): bool
