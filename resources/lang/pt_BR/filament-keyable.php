@@ -7,9 +7,12 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'column.key' => 'API Key',
     'column.name' => 'Nome',
-    'column.dispatched' => 'Despachado',
-    'column.processed_at' => 'Processado Em',
+    'column.keyable' => 'Recurso configurável',
+    'column.keyable_id' => 'ID configurável',
+    'column.keyable_type' => 'Tipo configurável',
+    'column.last_used_at' => 'Última utilização em',
 
     /*
     |--------------------------------------------------------------------------
@@ -17,19 +20,13 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'infolist.key' => 'API Key',
+    'infolist.copy_message' => 'API Key copiado com sucesso!',
     'infolist.name' => 'Nome',
-    'infolist.dispatched' => 'Despachado',
-    'infolist.processed_at' => 'Processado Em',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Tabs Operations
-    |--------------------------------------------------------------------------
-    */
-
-    'tabs.all' => 'Todos',
-    'tabs.async' => 'Assíncrono',
-    'tabs.sync' => 'Síncrono',
+    'infolist.keyable' => 'Recurso configurável',
+    'infolist.keyable_id' => 'ID configurável',
+    'infolist.keyable_type' => 'Tipo configurável',
+    'infolist.last_used_at' => 'Última utilização em',
 
     /*
     |--------------------------------------------------------------------------

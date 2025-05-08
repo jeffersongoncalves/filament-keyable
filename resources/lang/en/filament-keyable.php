@@ -7,9 +7,11 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'column.key' => 'API Key',
     'column.name' => 'Name',
-    'column.dispatched' => 'Dispatched',
-    'column.processed_at' => 'Processed At',
+    'column.keyable_id' => 'Keyable id',
+    'column.keyable_type' => 'Keyable type',
+    'column.last_used_at' => 'Last used At',
 
     /*
     |--------------------------------------------------------------------------
@@ -17,19 +19,12 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'infolist.key' => 'API Key',
+    'infolist.copy_message' => 'API Key copied successfully!',
     'infolist.name' => 'Name',
-    'infolist.dispatched' => 'Dispatched',
-    'infolist.processed_at' => 'Processed At',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Tabs Operations
-    |--------------------------------------------------------------------------
-    */
-
-    'tabs.all' => 'All',
-    'tabs.async' => 'Async',
-    'tabs.sync' => 'Sync',
+    'infolist.last_used_at' => 'Last used At',
+    'infolist.keyable_id' => 'Keyable id',
+    'infolist.keyable_type' => 'Keyable type',
 
     /*
     |--------------------------------------------------------------------------
