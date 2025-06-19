@@ -40,7 +40,7 @@ This solution is ideal for:
 You can install the package via composer:
 
 ```bash
-composer require jeffersongoncalves/filament-keyable
+composer require jeffersongoncalves/filament-keyable:^1.0
 ```
 
 ## Usage

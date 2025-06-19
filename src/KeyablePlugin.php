@@ -20,12 +20,10 @@ class KeyablePlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        if (!Utils::isResourcePublished($panel)) {
+        if (! Utils::isResourcePublished($panel)) {
             $panel->resources([Resources\KeyableResource::class]);
         }
     }
 
-    public function boot(Panel $panel): void
-    {
-    }
+    public function boot(Panel $panel): void {}
 }
