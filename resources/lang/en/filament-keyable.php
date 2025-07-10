@@ -9,6 +9,7 @@ return [
 
     'column.key' => 'API Key',
     'column.name' => 'Name',
+    'column.keyable' => 'Keyable',
     'column.keyable_id' => 'Keyable id',
     'column.keyable_type' => 'Keyable type',
     'column.last_used_at' => 'Last used At',

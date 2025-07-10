@@ -9,6 +9,7 @@ return [
 
     'column.key' => 'Clave API',
     'column.name' => 'Nombre',
+    'column.keyable' => 'Asignable',
     'column.keyable_id' => 'ID asignable',
     'column.keyable_type' => 'Tipo asignable',
     'column.last_used_at' => 'Último uso',
