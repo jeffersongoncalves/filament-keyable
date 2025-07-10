@@ -2,10 +2,18 @@
 
 namespace JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource\Pages;
 
+use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource;
 
 class ListKeyables extends ListRecords
 {
     protected static string $resource = KeyableResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\CreateAction::make(),
+        ];
+    }
 }
