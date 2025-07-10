@@ -48,6 +48,7 @@ composer require jeffersongoncalves/filament-keyable:^1.0
 Publish config file.
 
 ```bash
+php artisan vendor:publish --provider="Givebutter\LaravelKeyable\KeyableServiceProvider"
 php artisan vendor:publish --tag=filament-keyable-config
 ```
 

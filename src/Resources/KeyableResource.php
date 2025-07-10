@@ -21,15 +21,15 @@ class KeyableResource extends Resource
                 Forms\Components\Section::make()
                     ->columns()
                     ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->label(__('filament-keyable::filament-keyable.column.name'))
+                            ->required()
+                            ->maxLength(255),
                         Forms\Components\MorphToSelect::make('keyable')
                             ->label(__('filament-keyable::filament-keyable.column.keyable'))
                             ->required(fn () => ! Utils::isAllowEmptyModels())
                             ->hidden(fn () => Utils::isAllowEmptyModels())
                             ->types(self::getModels()),
-                        Forms\Components\TextInput::make('name')
-                            ->label(__('filament-keyable::filament-keyable.column.name'))
-                            ->required()
-                            ->maxLength(255),
                     ]),
             ]);
     }
@@ -54,12 +54,6 @@ class KeyableResource extends Resource
                 Infolists\Components\Section::make()
                     ->columns()
                     ->schema([
-                        Infolists\Components\TextEntry::make('keyable_id')
-                            ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_id'))
-                            ->hidden(fn () => Utils::isAllowEmptyModels()),
-                        Infolists\Components\TextEntry::make('keyable_type')
-                            ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_type'))
-                            ->hidden(fn () => Utils::isAllowEmptyModels()),
                         Infolists\Components\TextEntry::make('name')
                             ->label(__('filament-keyable::filament-keyable.infolist.name')),
                         Infolists\Components\TextEntry::make('key')
@@ -67,6 +61,12 @@ class KeyableResource extends Resource
                             ->copyable()
                             ->copyMessage(__('filament-keyable::filament-keyable.infolist.copy_message'))
                             ->copyMessageDuration(1500),
+                        Infolists\Components\TextEntry::make('keyable_id')
+                            ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_id'))
+                            ->hidden(fn () => Utils::isAllowEmptyModels()),
+                        Infolists\Components\TextEntry::make('keyable_type')
+                            ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_type'))
+                            ->hidden(fn () => Utils::isAllowEmptyModels()),
                     ]),
             ]);
     }
