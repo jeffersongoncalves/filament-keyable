@@ -34,7 +34,6 @@ return [
 
     'nav.group' => 'Settings',
     'nav.operation.label' => 'API Key',
-    'nav.operation.icon' => 'heroicon-o-key',
     'resource.label.operation' => 'API Key',
     'resource.label.operations' => 'API Keys',
 ];

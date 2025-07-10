@@ -34,7 +34,6 @@ return [
 
     'nav.group' => 'Configuración',
     'nav.operation.label' => 'Clave API',
-    'nav.operation.icon' => 'heroicon-o-key',
     'resource.label.operation' => 'Clave API',
     'resource.label.operations' => 'Claves API',
 ];
