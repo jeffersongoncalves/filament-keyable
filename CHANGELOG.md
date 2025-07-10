@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2 - 2025-07-10
+
+### What's Changed
+
+* chore: Configure Renovate by @renovate[bot] in https://github.com/jeffersongoncalves/filament-keyable/pull/3
+* Delete .github/FUNDING.yml by @jeffersongoncalves in https://github.com/jeffersongoncalves/filament-keyable/pull/5
+
+### New Contributors
+
+* @renovate[bot] made their first contribution in https://github.com/jeffersongoncalves/filament-keyable/pull/3
+* @jeffersongoncalves made their first contribution in https://github.com/jeffersongoncalves/filament-keyable/pull/5
+
+**Full Changelog**: https://github.com/jeffersongoncalves/filament-keyable/compare/1.0.1...1.0.2
+
 ## 1.0.1 - 2025-06-19
 
 ### What's Changed
