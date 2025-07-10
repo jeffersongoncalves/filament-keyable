@@ -16,7 +16,7 @@ class Utils
 
     public static function getResourceCluster(): ?string
     {
-        return config('filament-keyable.keyable_resource.cluster', null);
+        return config('filament-keyable.api_key_resource.cluster', null);
     }
 
     public static function isAllowEmptyModels(): bool
@@ -26,36 +26,41 @@ class Utils
 
     public static function getModels(): array
     {
-        return config('filament-keyable.models', []);
+        return config('filament-keyable.api_key_resource.models', []);
     }
 
     public static function getKeyableModel(): string
     {
-        return config('filament-keyable.keyable_resource.model', ApiKey::class);
+        return config('filament-keyable.api_key_resource.model', ApiKey::class);
     }
 
     public static function isResourceNavigationRegistered(): bool
     {
-        return config('filament-keyable.keyable_resource.should_register_navigation', true);
+        return config('filament-keyable.api_key_resource.should_register_navigation', true);
     }
 
     public static function isResourceNavigationGroupEnabled(): bool
     {
-        return config('filament-keyable.keyable_resource.navigation_group', true);
+        return config('filament-keyable.api_key_resource.navigation_group', true);
     }
 
     public static function getResourceNavigationSort(): ?int
     {
-        return config('filament-keyable.keyable_resource.navigation_sort');
+        return config('filament-keyable.api_key_resource.navigation_sort');
+    }
+
+    public static function getResourceNavigationIcon(): string
+    {
+        return config('filament-keyable.api_key_resource.navigation_icon');
     }
 
     public static function getResourceSlug(): string
     {
-        return (string) config('filament-keyable.keyable_resource.slug');
+        return (string) config('filament-keyable.api_key_resource.slug');
     }
 
     public static function isResourceNavigationBadgeEnabled(): bool
     {
-        return config('filament-keyable.keyable_resource.navigation_badge', true);
+        return config('filament-keyable.api_key_resource.navigation_badge', true);
     }
 }

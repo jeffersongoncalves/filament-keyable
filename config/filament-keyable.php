@@ -8,6 +8,7 @@ return [
         'model' => ApiKey::class,
         'should_register_navigation' => true,
         'navigation_badge' => true,
+        'navigation_icon' => 'heroicon-o-key',
         'navigation_sort' => -1,
         'slug' => 'settings/api-keys',
         'models' => [

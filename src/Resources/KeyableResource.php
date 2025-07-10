@@ -143,7 +143,7 @@ class KeyableResource extends Resource
 
     public static function getNavigationIcon(): string
     {
-        return __('filament-keyable::filament-keyable.nav.keyable.icon');
+        return Utils::getResourceNavigationIcon();
     }
 
     public static function getNavigationSort(): ?int
