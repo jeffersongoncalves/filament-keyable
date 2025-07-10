@@ -33,7 +33,7 @@ return [
     */
 
     'nav.group' => 'Configuración',
-    'nav.operation.label' => 'Clave API',
-    'resource.label.operation' => 'Clave API',
-    'resource.label.operations' => 'Claves API',
+    'nav.keyable.label' => 'Clave API',
+    'resource.label.keyable' => 'Clave API',
+    'resource.label.keyables' => 'Claves API',
 ];

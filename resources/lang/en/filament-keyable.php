@@ -33,7 +33,7 @@ return [
     */
 
     'nav.group' => 'Settings',
-    'nav.operation.label' => 'API Key',
-    'resource.label.operation' => 'API Key',
-    'resource.label.operations' => 'API Keys',
+    'nav.keyable.label' => 'API Key',
+    'resource.label.keyable' => 'API Key',
+    'resource.label.keyables' => 'API Keys',
 ];
