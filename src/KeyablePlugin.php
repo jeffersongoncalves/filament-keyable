@@ -4,6 +4,7 @@ namespace JeffersonGoncalves\Filament\Keyable;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource;
 use JeffersonGoncalves\Filament\Keyable\Support\Utils;
 
 class KeyablePlugin implements Plugin
@@ -21,7 +22,7 @@ class KeyablePlugin implements Plugin
     public function register(Panel $panel): void
     {
         if (! Utils::isResourcePublished($panel)) {
-            $panel->resources([Resources\KeyableResource::class]);
+            $panel->resources([KeyableResource::class]);
         }
     }
 

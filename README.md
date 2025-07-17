@@ -10,7 +10,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-keyable/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-keyable/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-keyable.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-keyable)
 
-This is a Laravel Filament package that provides API Key management functionality for any model in your web application.
+This is a Laravel Filament v4 package that provides API Key management functionality for any model in your web application.
 Built on top of the `givebutter/laravel-keyable` library, this plugin allows you to associate incoming requests with
 their respective models and manage API key authorization through Policies. The package seamlessly integrates these
 features into the Filament admin panel interface.
@@ -35,12 +35,18 @@ This solution is ideal for:
 - Secure model access
 - Data migrations
 
+## Requirements
+
+- PHP 8.2 or higher
+- Laravel 11.0 or higher
+- Filament 4.0 or higher
+
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require jeffersongoncalves/filament-keyable:^1.0
+composer require jeffersongoncalves/filament-keyable:^2.0
 ```
 
 ## Usage

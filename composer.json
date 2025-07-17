@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "^8.2|^8.3",
-        "filament/filament": "^3.0",
+        "filament/filament": "^4.0",
         "givebutter/laravel-keyable": "^3.1",
         "spatie/laravel-package-tools": "^1.14.0"
     },
@@ -33,7 +33,10 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench icons:cache",
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ],
         "analyse": "vendor/bin/phpstan analyse",
         "format": "vendor/bin/pint"
     },

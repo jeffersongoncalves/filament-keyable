@@ -2,30 +2,36 @@
 
 namespace JeffersonGoncalves\Filament\Keyable\Resources;
 
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Infolists;
-use Filament\Infolists\Infolist;
+use Filament\Actions\ViewAction;
+use Filament\Forms\Components\MorphToSelect;
+use Filament\Forms\Components\MorphToSelect\Type;
+use Filament\Forms\Components\TextInput;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Panel;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource\Pages;
+use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource\Pages\CreateKeyable;
+use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource\Pages\ListKeyables;
+use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource\Pages\ViewKeyable;
 use JeffersonGoncalves\Filament\Keyable\Support\Utils;
 
 class KeyableResource extends Resource
 {
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Section::make()
+        return $schema
+            ->components([
+                Section::make()
                     ->columns()
                     ->schema([
-                        Forms\Components\TextInput::make('name')
+                        TextInput::make('name')
                             ->label(__('filament-keyable::filament-keyable.column.name'))
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\MorphToSelect::make('keyable')
+                        MorphToSelect::make('keyable')
                             ->label(__('filament-keyable::filament-keyable.column.keyable'))
                             ->required(fn () => ! Utils::isAllowEmptyModels())
                             ->hidden(fn () => Utils::isAllowEmptyModels())
@@ -41,30 +47,30 @@ class KeyableResource extends Resource
             return [];
         }
         foreach ($models as $model) {
-            $models[] = Forms\Components\MorphToSelect\Type::make($model);
+            $models[] = Type::make($model);
         }
 
         return $models;
     }
 
-    public static function infolist(Infolist $infolist): Infolist
+    public static function infolist(Schema $schema): Schema
     {
-        return $infolist
-            ->schema([
-                Infolists\Components\Section::make()
+        return $schema
+            ->components([
+                Section::make()
                     ->columns()
                     ->schema([
-                        Infolists\Components\TextEntry::make('name')
+                        TextEntry::make('name')
                             ->label(__('filament-keyable::filament-keyable.infolist.name')),
-                        Infolists\Components\TextEntry::make('key')
+                        TextEntry::make('key')
                             ->label(__('filament-keyable::filament-keyable.infolist.key'))
                             ->copyable()
                             ->copyMessage(__('filament-keyable::filament-keyable.infolist.copy_message'))
                             ->copyMessageDuration(1500),
-                        Infolists\Components\TextEntry::make('keyable_id')
+                        TextEntry::make('keyable_id')
                             ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_id'))
                             ->hidden(fn () => Utils::isAllowEmptyModels()),
-                        Infolists\Components\TextEntry::make('keyable_type')
+                        TextEntry::make('keyable_type')
                             ->label(fn () => __('filament-keyable::filament-keyable.infolist.keyable_type'))
                             ->hidden(fn () => Utils::isAllowEmptyModels()),
                     ]),
@@ -75,30 +81,30 @@ class KeyableResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->label(fn () => __('filament-keyable::filament-keyable.column.name')),
-                Tables\Columns\TextColumn::make('keyable_id')
+                TextColumn::make('keyable_id')
                     ->label(fn () => __('filament-keyable::filament-keyable.column.keyable_id'))
                     ->hidden(fn () => Utils::isAllowEmptyModels()),
-                Tables\Columns\TextColumn::make('keyable_type')
+                TextColumn::make('keyable_type')
                     ->label(fn () => __('filament-keyable::filament-keyable.column.keyable_type'))
                     ->hidden(fn () => Utils::isAllowEmptyModels()),
-                Tables\Columns\TextColumn::make('last_used_at')
+                TextColumn::make('last_used_at')
                     ->label(fn () => __('filament-keyable::filament-keyable.column.last_used_at'))
                     ->dateTime()
                     ->sortable(),
             ])
-            ->actions([
-                Tables\Actions\ViewAction::make(),
+            ->recordActions([
+                ViewAction::make(),
             ]);
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListKeyables::route('/'),
-            'create' => Pages\CreateKeyable::route('/create'),
-            'view' => Pages\ViewKeyable::route('/{record}'),
+            'index' => ListKeyables::route('/'),
+            'create' => CreateKeyable::route('/create'),
+            'view' => ViewKeyable::route('/{record}'),
         ];
     }
 
@@ -151,7 +157,7 @@ class KeyableResource extends Resource
         return Utils::getResourceNavigationSort();
     }
 
-    public static function getSlug(): string
+    public static function getSlug(?Panel $panel = null): string
     {
         return Utils::getResourceSlug();
     }
