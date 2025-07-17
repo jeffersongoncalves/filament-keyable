@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.0 - 2025-07-17
+
+### What's Changed
+
+* Delete renovate.json by @jeffersongoncalves in https://github.com/jeffersongoncalves/filament-keyable/pull/6
+
+**Full Changelog**: https://github.com/jeffersongoncalves/filament-keyable/compare/1.1.1...2.0.0
+
 ## 1.1.1 - 2025-07-10
 
 **Full Changelog**: https://github.com/jeffersongoncalves/filament-keyable/compare/1.1.0...1.1.1
