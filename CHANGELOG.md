@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2026-02-16
+
+### What's Changed
+
+* build(deps): bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/jeffersongoncalves/filament-keyable/pull/7
+* build(deps): bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/jeffersongoncalves/filament-keyable/pull/8
+* build(deps): bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/jeffersongoncalves/filament-keyable/pull/9
+* build(deps): bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/jeffersongoncalves/filament-keyable/pull/13
+* build(deps): bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/jeffersongoncalves/filament-keyable/pull/12
+
+**Full Changelog**: https://github.com/jeffersongoncalves/filament-keyable/compare/2.0.0...3.0.0
+
 ## 2.0.0 - 2025-07-17
 
 ### What's Changed
