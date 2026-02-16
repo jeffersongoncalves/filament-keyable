@@ -1,13 +1,13 @@
 <div class="filament-hidden">
 
-![Filament Keyable](https://raw.githubusercontent.com/jeffersongoncalves/filament-keyable/master/art/jeffersongoncalves-filament-keyable.png)
+![Filament Keyable](https://raw.githubusercontent.com/jeffersongoncalves/filament-keyable/3.x/art/jeffersongoncalves-filament-keyable.png)
 
 </div>
 
 # Filament Keyable
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-keyable.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-keyable)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-keyable/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-keyable/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-keyable/fix-php-code-style-issues.yml?branch=3.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-keyable/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A3.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-keyable.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-keyable)
 
 This is a Laravel Filament v4 package that provides API Key management functionality for any model in your web application.
