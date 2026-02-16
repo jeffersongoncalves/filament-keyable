@@ -4,7 +4,7 @@ namespace JeffersonGoncalves\Filament\Keyable;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource;
+use JeffersonGoncalves\Filament\Keyable\Resources\Keyables\KeyableResource;
 use JeffersonGoncalves\Filament\Keyable\Support\Utils;
 
 class KeyablePlugin implements Plugin

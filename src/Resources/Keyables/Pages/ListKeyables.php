@@ -1,10 +1,10 @@
 <?php
 
-namespace JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource\Pages;
+namespace JeffersonGoncalves\Filament\Keyable\Resources\Keyables\Pages;
 
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
-use JeffersonGoncalves\Filament\Keyable\Resources\KeyableResource;
+use JeffersonGoncalves\Filament\Keyable\Resources\Keyables\KeyableResource;
 
 class ListKeyables extends ListRecords
 {
