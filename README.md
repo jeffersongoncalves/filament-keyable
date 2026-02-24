@@ -1,6 +1,6 @@
 <div class="filament-hidden">
 
-![Filament Keyable](https://raw.githubusercontent.com/jeffersongoncalves/filament-keyable/master/art/jeffersongoncalves-filament-keyable.png)
+![Filament Keyable](https://raw.githubusercontent.com/jeffersongoncalves/filament-keyable/2.x/art/jeffersongoncalves-filament-keyable.png)
 
 </div>
 
