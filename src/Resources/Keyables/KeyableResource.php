@@ -6,7 +6,6 @@ use Filament\Panel;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Tables\Table;
-use JeffersonGoncalves\Filament\Keyable\Resources\Keyables\Pages;
 use JeffersonGoncalves\Filament\Keyable\Resources\Keyables\Schemas\KeyableForm;
 use JeffersonGoncalves\Filament\Keyable\Resources\Keyables\Schemas\KeyableInfolist;
 use JeffersonGoncalves\Filament\Keyable\Resources\Keyables\Tables\KeyablesTable;
